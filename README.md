@@ -24,7 +24,7 @@
 - has_many :users, through: :users_groups
 - has_many :groups_users
 
-## message
+## messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
