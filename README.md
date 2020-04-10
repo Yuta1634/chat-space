@@ -7,7 +7,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
-|name|string|null: false|
+|name|string|null: false, index: true|
 ### Association
 - has_many :messeages
 - has_many :groups, through: : users_groups
@@ -28,7 +28,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null :false|
+|body|text||
 |image|string||
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
@@ -41,8 +41,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
