@@ -1,0 +1,28 @@
+.main-chat
+  .main-chat__header
+    .main-chat__header--group-member
+      %p.main-chat__header--group-name
+        test
+      %ul.main-chat__header--member-list
+        member:
+        %li.main-chat__header--member
+          Yuta
+    .main-chat__header--edit--btn
+      %a{href: "#", class: "edit-btn"}Edit
+  .main-chat__message-list
+    .main-chat__messages
+      .main-chat__message
+        %p.main-chat__message-member
+          Yuta
+        %p.main-chat__message-time
+          2020/04/12(san) 22:34:00
+      .main-chat__message-text
+        こんばんは！
+  .main-chat__form
+    %form.message--text
+      .message--box
+        %input{type: "text", class: "message--box__text", placeholder: "type a message"}
+        %label{class: "message--box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "massage--box__file"}
+      %input{type: "submit", class: "submit--btn"}
