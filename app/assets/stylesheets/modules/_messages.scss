@@ -8,17 +8,17 @@
   display: flex;
 }
 
-$main-chat-color: #ffffff;
+$white-color: #ffffff;
 $submit-color:#38aef0;
 
 .main-chat{
-  background-color:$main-chat-color;
+  background-color:$white-color;
   height: 100%;
   width: calc( 100vw - 300px);
   float: right;
   &__header{
     height: 100px;
-    background-color:$main-chat-color;
+    background-color:$white-color;
     border-bottom:1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
@@ -105,7 +105,7 @@ $submit-color:#38aef0;
         padding: 0 30px;
         margin-left:15px ;
         background-color:$submit-color;
-        color: $main-chat-color;
+        color: $white-color;
         cursor: pointer; 
       }
     }

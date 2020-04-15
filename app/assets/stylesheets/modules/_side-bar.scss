@@ -3,7 +3,7 @@
   width: 300px;
   background-color: #253141;
   font-weight: bold;
-  color:$main-chat-color;
+  color:$white-color;
   &__header{
     height: 100px;  
     display: flex;
@@ -23,11 +23,11 @@
         display: flex;
         .message__btn{
           text-decoration: none;
-          color:$main-chat-color;
+          color:$white-color;
         }
         .user-edit__btn{
           text-decoration: none;
-          color:$main-chat-color;
+          color:$white-color;
           padding-left:5px;
         }
       }
@@ -35,7 +35,7 @@
   }
   &__group{
     background-color: #2f3e51;
-    height: 100%;
+    height: calc( 100vh - 100px);
     padding-top: 20px;
     .group-list{
       padding: 0 20px 40px 20px;
