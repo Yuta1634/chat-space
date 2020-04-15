@@ -1,0 +1,24 @@
+.side-bar
+  .side-bar__header
+    .top-item
+      %p.top-item__name
+        Yuta
+      %ul.top-item__icons
+        %li.icon
+        = link_to "#", class: "message__btn" do
+          = icon('fa', 'edit')
+        %li.icon
+        = link_to "#", class: "user-edit__btn" do
+          = icon('fa', 'cog')
+  .side-bar__group
+    .group-list
+      %p.group-list__name
+        tech:camp
+      %p.group-list__message
+        まだメッセージはありません
+    .group-list
+      %p.group-list__name
+        tech:camp
+      %p.group-list__message
+        まだメッセージはありません
+
