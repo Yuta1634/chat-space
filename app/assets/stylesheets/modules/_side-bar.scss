@@ -37,14 +37,21 @@
     background-color: #2f3e51;
     height: calc( 100vh - 100px);
     padding-top: 20px;
+    text-decoration: none;
     .group-list{
       padding: 0 20px 40px 20px;
-      &__name{
-        font-size: 15px;
-        padding-bottom:5px;
-      }
-      &__message{
-        font-size: 11px;
+      text-decoration: none;
+      color:$white-color;
+      .group-lists{
+        text-decoration: none;
+        color: $white-color;
+        &__name{
+          font-size: 15px;
+          padding-bottom:5px;
+        }
+        &__message{
+          font-size: 11px;
+        }
       }
     }
   }
