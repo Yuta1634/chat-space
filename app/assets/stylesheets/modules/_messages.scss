@@ -32,6 +32,9 @@ $submit-color:#38aef0;
         color: #999999;
         font-size: 12px;
         display: flex;
+      &-name{
+        padding-left:5px;
+      }
     }
     &--edit--btn{
       height: 40px;
@@ -80,9 +83,9 @@ $submit-color:#38aef0;
     padding:20px 40px;
     .message--text{
       display: flex;
+      width: 100%;
       .message--box{
         position: relative;
-        width: 100%;
         &__text{
           height:50px;
           width: 100%;
