@@ -2,28 +2,23 @@
   .main-chat__header
     .main-chat__header--group-member
       %p.main-chat__header--group-name
-        test
+        = @group.name
       %ul.main-chat__header--member-list
-        member:
-        %li.main-chat__header--member
-          Yuta
+        member :
+        - @group.users.each do |user|
+          %li.main-chat__header--member-list-name
+            = user.name
     .main-chat__header--edit--btn
-      = link_to "#", class: "edit-btn" do
+      = link_to edit_group_path(@group), class: "edit-btn" do
         Edit
   .main-chat__message-list
-    .main-chat__messages
-      .main-chat__message
-        %p.main-chat__message-member
-          Yuta
-        %p.main-chat__message-time
-          2020/04/12(san) 22:34:00
-      .main-chat__message-text
-        こんばんは！
+    = render @messages
   .main-chat__form
-    %form.message--text
-      .message--box
-        %input{type: "text", class: "message--box__text", placeholder: "type a message"}
-        %label{class: "message--box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "massage--box__file"}
-      %input{type: "submit", class: "submit--btn"}
+    = form_for [@group, @message] do |f|
+      .message--text
+        = f.text_field :content, class: "message--box__text", placeholder: 'type a message'
+        .message--box
+          = f.label :image, class: "message--box__image" do
+            = icon('fas', 'image')
+            =f.file_field :image, class: "massage--box__file"
+        = f.submit 'Send', class: "submit--btn"

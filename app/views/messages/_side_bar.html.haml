@@ -13,9 +13,9 @@
   .side-bar__group
     -current_user.groups.each do |group|
       .group-list
-        = link_to '#', class: "group-lists" do
+        = link_to group_messages_path(group), class: "group-lists" do
           %p.group-lists__name
             = group.name
           %p.group-lists__message
-            まだメッセージはありません
+            = group.show_list_message
       
