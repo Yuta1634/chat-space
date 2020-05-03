@@ -53,9 +53,11 @@ $submit-color:#38aef0;
   }
   &__message-list{
     background-color: #fafafa;
+    padding: 35px 40px;
     height: calc( 100% - 190px);
+    overflow: scroll;
     .main-chat__messages{
-      padding: 35px 40px;
+      padding-bottom:46px;
       .main-chat__message{
         display: flex;
         padding-bottom:12px;
@@ -73,7 +75,6 @@ $submit-color:#38aef0;
       .main-chat__message-text{
         color:#434A54;
         font-size: 14px;
-        padding-bottom: 46px;
       }
     }
   }
